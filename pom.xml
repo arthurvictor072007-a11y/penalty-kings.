@@ -5,6 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Uso as versões de bibliotecas que o Spring Boot já combina entre si. -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,17 +17,26 @@
     <artifactId>penalty-kings</artifactId>
     <version>1.0.0</version>
 
+    <!-- O código deste projeto usa Java 17. -->
     <properties>
         <java.version>17</java.version>
     </properties>
 
+    <!-- O starter web traz o servidor e o suporte pras rotas da API. -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- O JUnit vem nesta dependência e só entra na hora dos testes. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
+    <!-- O plugin do Spring Boot prepara o JAR executável do jogo. -->
     <build>
         <plugins>
             <plugin>
