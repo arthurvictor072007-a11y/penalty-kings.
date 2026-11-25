@@ -42,23 +42,22 @@
       <section class="controls">
         <h2>Escolha onde chutar</h2>
         <div class="dirs">
-          <button data-dir="LEFT">← Esquerda</button>
-          <button data-dir="CENTER">Centro</button>
-          <button data-dir="RIGHT">Direita →</button>
+          <button data-dir="esquerda">← Esquerda</button>
+          <button data-dir="centro">Centro</button>
+          <button data-dir="direita">Direita →</button>
         </div>
         <h3>Potência</h3>
         <!-- Os botões guardam a potência em data-power. A média começa selecionada. -->
         <div class="power">
-          <button data-power="LOW">Fraca</button>
-          <button class="active" data-power="MEDIUM">Média</button>
-          <button data-power="HIGH">Forte</button>
+          <button data-power="fraca" aria-pressed="false">Fraca</button>
+          <button class="active" data-power="média" aria-pressed="true">Média</button>
+          <button data-power="forte" aria-pressed="false">Forte</button>
         </div>
       </section>
       <!-- Aqui aparece o resultado que o jogador acabou de tirar. -->
-      <div id="message" class="message">Novo jogo iniciado. Boa sorte!</div>
+      <div role="status" id="message" class="message">Novo jogo iniciado. Boa sorte!</div>
     </main>
     <!-- Carrego o jogo depois que o placar e os botões já estão na página. -->
-    <script src="app.js">
-    </script>
+    <script type="module" src="tela.js"></script>
   </body>
 </html>
